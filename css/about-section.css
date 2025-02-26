@@ -1,114 +1,237 @@
-/* About Section */
 .about {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1s ease-in-out;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-/* About Container */
-.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 3s ease-in-out;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 3.5s ease-in-out;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    margin: 5px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* ========== About Container ========== */
+  .about-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   
   /* Personal Info */
   .personal-info {
     flex: 1;
     text-align: left;
-    min-width: 280px;
+    min-width: 300px;
+    animation: slideInLeft 3s ease-in-out;
   }
   
   .personal-info h3 {
+    font-size: 1.8rem;
     color: #333;
-    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
   
-  .intro {
-    font-size: 1rem;
+  .intro-2 {
+    font-size: 1.1rem;
     margin: 10px 0;
     color: #555;
+    line-height: 1.5;
   }
   
-  /* Skills List */
+  /* ========== Skills List ========== */
   .skills-list {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   
   .skills-list h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #007bff;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   
   .skills {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   
   .skill-item {
     display: inline-block;
     background: #007bff;
     color: white;
-    padding: 8px 12px;
-    margin: 5px;
+    padding: 10px 15px;
     border-radius: 6px;
-    transition: transform 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: bounceIn 3.5s ease-in-out;
   }
   
   .skill-item:hover {
+    background: #0056b3;
     transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
   }
   
-  /* Personal Description */
+  /* ========== Personal Description ========== */
   .personal-description {
     flex: 1;
     text-align: left;
-    min-width: 280px;
+    min-width: 300px;
+    animation: slideInRight 3s ease-in-out;
   }
   
   .personal-description p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
   
-  /* Resume Button */
+  /* ========== Resume Button ========== */
   .resume-link {
     display: inline-block;
     background: #007bff;
     color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
   }
   
   .resume-link:hover {
     background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 91, 187, 0.4);
   }
   
-  /* Animations */
+  /* ========== Animations ========== */
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* ========== Responsive Design ========== */
+  @media (max-width: 768px) {
+    .about {
+      padding: 30px 20px;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .personal-info,
+    .personal-description {
+      text-align: center;
+    }
+  
+    .resume-link {
+      display: inline-block;
+      margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about {
+      padding: 25px 15px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .personal-info h3 {
+      font-size: 1.6rem;
+    }
+  
+    .intro-2 {
+      font-size: 1rem;
+    }
+  
+    .skills {
+      justify-content: center;
+    }
+  
+    .resume-link {
+      padding: 10px 20px;
+      font-size: 0.95rem;
     }
   }

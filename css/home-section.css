@@ -1,0 +1,94 @@
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Centering the Content */
+.hero {
+  max-width: 600px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Main Heading */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Subtitle / Introduction */
+.intro {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* CTA Button */
+#cta {
+  background: #ff6b6b;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#cta:hover {
+  background: #ff4f4f;
+  transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 5rem 1.5rem;
+  }
+  .hero {
+    max-width: 90%;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .intro {
+    font-size: 1.2rem;
+  }
+  #cta {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  #cta {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
