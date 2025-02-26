@@ -1,25 +1,48 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+  /* margin: 0;
+    padding: 0; */
+  /* box-sizing: border-box; */
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
 .header {
-  background-color: #ffffff;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(30, 44, 78, 0.9); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  /* padding: 15px 0; */
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightskyblue;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.nav-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 1rem; */
-    margin: 0 auto;
-    max-width: 1200px;
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1rem; */
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .nav-links {
@@ -31,43 +54,118 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: whitesmoke;
   font-weight: 500;
   font-size: 1.1rem;
 }
 
 .nav-links a:hover {
-    color: vaR(--accent-color);
+  color: #ff6b6b;
 }
 
 .logo a {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-color);
-    text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo a:hover {
+  color: #ff6b6b;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero {
+  max-width: 600px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* CTA Button */
+#cta {
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#cta:hover {
+  background: #ff4f4f;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-
-
-@media (max-width: 768px) {
-    .nav-content{
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .nav-links{
-        flex-direction: column;
-        text-align: center;
-        gap:0.5rem;
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
+/* media query */
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .home {
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  #cta {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-
-
-
-
-
+  .personal-info,
+  .personal-description {
+    text-align: center;
+  }
+}
 
 /* footer */
 
