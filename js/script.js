@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+//project type functionality
 document.addEventListener("DOMContentLoaded", function() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projectCards = document.querySelectorAll(".project-card");
@@ -61,6 +63,95 @@ document.addEventListener("DOMContentLoaded", function() {
         
         if (hiddenProjects.length <= 3) {
             viewMoreBtn.style.display = "none"; // Hide button if no more projects left
+        }
+    });
+});
+
+//scroll effect for contact form 
+//contact form functionality
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactSection = document.getElementById("contact");
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    // Show form on scroll
+    function handleScroll() {
+        const sectionTop = contactSection.getBoundingClientRect().top;
+        const sectionHeight = contactSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - (sectionHeight * 0.4)) {
+            contactForm.classList.add("visible");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // Form Validation
+    function validateInput(input, errorMessage) {
+        const errorElement = input.nextElementSibling;
+        if (input.value.trim() === "") {
+            errorElement.textContent = errorMessage;
+            input.style.borderColor = "red";
+            return false;
+        } else {
+            errorElement.textContent = "";
+            input.style.borderColor = "#ccc";
+            return true;
+        }
+    }
+
+    function validateEmail(input) {
+        const errorElement = input.nextElementSibling;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(input.value.trim())) {
+            errorElement.textContent = "Enter a valid email!";
+            input.style.borderColor = "red";
+            return false;
+        } else {
+            errorElement.textContent = "";
+            input.style.borderColor = "#ccc";
+            return true;
+        }
+    }
+
+    // Form Submission
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+
+        const isNameValid = validateInput(nameInput, "Name is required!");
+        const isEmailValid = validateEmail(emailInput);
+        const isMessageValid = validateInput(messageInput, "Message cannot be empty!");
+
+        if (isNameValid && isEmailValid && isMessageValid) {
+            formStatus.textContent = "Message sent successfully!";
+            formStatus.style.color = "green";
+            formStatus.style.opacity = "1";
+
+            // Clear the form after submission
+            contactForm.reset();
+
+            // Fade out success message after 3 seconds
+            setTimeout(() => {
+                let fadeEffect = setInterval(() => {
+                    if (formStatus.style.opacity > "0") {
+                        formStatus.style.opacity -= "0.1";
+                    } else {
+                        clearInterval(fadeEffect);
+                        formStatus.textContent = "";
+                        formStatus.style.opacity = "1"; // Reset opacity for next time
+                    }
+                }, 100);
+            }, 3000);
+        } else {
+            formStatus.textContent = "Please fix the errors above.";
+            formStatus.style.color = "red";
         }
     });
 });
