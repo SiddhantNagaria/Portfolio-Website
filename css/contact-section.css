@@ -41,6 +41,14 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 1s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#contact-form.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Form Group */
@@ -55,6 +63,14 @@
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
 }
 
 /* Input & Textarea */
