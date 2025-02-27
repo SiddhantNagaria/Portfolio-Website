@@ -16,9 +16,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // navbar menu toggle 
-document.getElementById('menuToggle').addEventListener('click', function () {
-    document.getElementById('navLinks').classList.toggle('show');
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll(".nav-item");
+    const overlay = document.createElement("div");
+
+    overlay.classList.add("menu-overlay");
+    document.body.appendChild(overlay);
+
+    // Toggle menu open/close
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+        overlay.classList.toggle("active");
+    });
+
+    // Close menu when clicking on a link
+    navItems.forEach(item => {
+        item.addEventListener("click", function () {
+            navLinks.classList.remove("show");
+            overlay.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside the menu
+    overlay.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        overlay.classList.remove("active");
+    });
+
+    // Shrinking header on scroll
+    const header = document.querySelector(".header");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
 });
+
 
 
 //scroll effect for project section
