@@ -56,7 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+//resume download button logic
+document.getElementById('downloadResumeBtn').addEventListener('click', function() {
+    // Add your resume download logic here
+    alert('Resume download feature clicked!');
+});
 
 //scroll effect for project section
 document.addEventListener("DOMContentLoaded", function () {

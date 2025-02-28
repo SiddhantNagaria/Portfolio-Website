@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siddhant Nagaria - Full Stack Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about-section.css">
     <link rel="stylesheet" href="css/home-section.css">
@@ -56,17 +58,40 @@
                     <div class="skills-list">
                         <h3>Skills</h3>
                         <ul class="skills" aria-label="List of skills">
-                            <li class="skill-item">HTML5</li>
-                            <li class="skill-item">CSS3</li>
-                            <li class="skill-item">JavaScript</li>
-                            <li class="skill-item">Node.js</li>
+                            <li class="skill-item">
+                                <i class="fas fa-code"></i>
+                                HTML5
+                            </li>
+                            <li class="skill-item">
+                                <i class="fa-solid fa-palette"></i>
+                                CSS3
+                            </li>
+                            <li class="skill-item">
+                                <i class="fa-brands fa-js"></i>
+                                JavaScript
+                            </li>
+                            <li class="skill-item">
+                                <i class="fa-brands fa-node"></i>
+                                Node.js
+                            </li>
+                            <li class="skill-item">
+                                <i class="fa-solid fa-terminal"></i>
+                                Express.js
+                            </li>
+                            <li class="skill-item">
+                                <i class="fa-solid fa-database"></i>
+                                MongoDB
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="personal-description">
                     <p>I'm a dedicated developer with a focus on creating beautiful, responsive websites. I enjoy
                         turning complex problems into simple, beautiful, and intuitive solutions.</p>
-                    <a href="#" class="resume-link">Download Resume</a>
+                    <button class="resume-link" id="downloadResumeBtn">
+                        <i class="fa-solid fa-file"></i>
+                        Download Resume
+                    </button>
                 </div>
             </div>
         </section>
@@ -83,8 +108,8 @@
             <div class="projects-grid">
                 <!-- Project Card 1 -->
                 <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1" class="project-image">
-                    <h3>Project One</h3>
+                    <img src="img/project1.avif" alt="Project 1" class="project-image">
+                    <h3>Crud Application</h3>
                     <p class="project-description">A brief description of your first project goes here.</p>
                     <a href="#" class="project-link">View Project</a>
                 </div>
