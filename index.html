@@ -54,7 +54,14 @@
             <div class="about-container">
                 <div class="personal-info">
                     <h3>Hi, I'm Siddhant Nagaria</h3>
-                    <p class="intro-2">I'm a passionate web developer with expertise in HTML, CSS, and JavaScript.</p>
+                    <p class="intro-2">I am a proficient MERN stack developer with hands-on experience in
+                        building web applications, including CRUD operations and authentication systems. I have
+                        completed multiple internships, gaining expertise in JavaScript, React.js, Node.js, and MongoDB,
+                        along with Python skills. My projects, such as the Blood Bank App and Amazon Clone,
+                        showcase his ability to develop full-stack applications with a user-centric approach. I
+                        have also demonstrated problem-solving skills by solving 120+ LeetCode questions and securing a
+                        top rank in a coding event. My technical proficiency is complemented by strong adaptability and
+                        decision-making abilities.</p>
                     <div class="skills-list">
                         <h3>Skills</h3>
                         <ul class="skills" aria-label="List of skills">
@@ -86,12 +93,18 @@
                     </div>
                 </div>
                 <div class="personal-description">
-                    <p>I'm a dedicated developer with a focus on creating beautiful, responsive websites. I enjoy
-                        turning complex problems into simple, beautiful, and intuitive solutions.</p>
-                    <button class="resume-link" id="downloadResumeBtn">
-                        <i class="fa-solid fa-file"></i>
-                        Download Resume
-                    </button>
+                    <p>I am a dedicated and versatile individual with a strong background in leadership,
+                        teamwork, and problem-solving. I have actively participated in cultural events, taking on
+                        coordination roles in major college festivals like SRIJAN and Spandan, showcasing my
+                        organizational and management skills. My ability to adapt and make effective decisions has been
+                        evident through my participation in various competitions and workshops. Beyond academics,
+                        I have engaged in multiple internships, gaining practical exposure to real-world projects.
+                        My commitment to continuous learning and active involvement in extracurricular activities
+                        highlight his well-rounded personality and professional growth.</p>
+                    <a href="img/GLA University - Siddhant Nagaria.pdf" download class="resume-link" download
+                        id="downloadResumeBtn">
+                        <i class="fa-solid fa-file"></i> Download Resume
+                    </a>
                 </div>
             </div>
         </section>
@@ -99,15 +112,15 @@
         <!-- Projects section with Lightbox -->
         <section id="projects" class="projects-section">
             <h2>My Projects</h2>
-            <div class="filter-buttons">
+            <!-- <div class="filter-buttons">
                 <button class="filter-btn active" data-category="all">All</button>
                 <button class="filter-btn" data-category="web">Web</button>
                 <button class="filter-btn" data-category="ml">Machine Learning</button>
                 <button class="filter-btn" data-category="app">App Development</button>
-            </div>
+            </div> -->
             <div class="projects-grid">
                 <!-- Project Card 1 -->
-                <div class="project-card" onclick="openLightbox('img/project1.avif')">
+                <div class="project-card">
                     <img src="img/project1.avif" alt="Project 1" class="project-image">
                     <h3>Crud Application</h3>
                     <p class="project-description">A brief description of your first project goes here.</p>
@@ -115,17 +128,17 @@
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="project-card" onclick="openLightbox('project2.jpg')">
+                <div class="project-card">
                     <img src="project2.jpg" alt="Project 2" class="project-image">
-                    <h3>Project Two</h3>
+                    <h3>User Activity Monitor</h3>
                     <p class="project-description">A brief description of your second project goes here.</p>
                     <a href="#" class="project-link">View Project</a>
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="project-card" onclick="openLightbox('project3.jpg')">
+                <div class="project-card">
                     <img src="project3.jpg" alt="Project 3" class="project-image">
-                    <h3>Project Three</h3>
+                    <h3>Blood Bank App</h3>
                     <p class="project-description">A brief description of your third project goes here.</p>
                     <a href="#" class="project-link">View Project</a>
                 </div>
@@ -160,9 +173,8 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write your message" required minlength="10"
-                            title="Please provide a detailed message" maxlength="500" rows="5" cols="30">
-                        </textarea>
+                        <textarea id="message" name="message" placeholder="Write your message" required
+                            minlength="10"></textarea>
                         <small class="error-message"></small>
                     </div>
                     <button type="submit">Send Message</button>
@@ -173,8 +185,6 @@
                     <ul>
                         <li><a href="#"><i class="fab fa-github"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -202,8 +212,6 @@
                 <div class="social-links">
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </section>
 
@@ -213,6 +221,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 
 </html>
