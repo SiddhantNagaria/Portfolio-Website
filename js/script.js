@@ -1,18 +1,3 @@
-// to show if js is working
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("JavaScript loaded!");
-
-  // Basic setup
-  const body = document.body;
-  const nav = document.querySelector("nav");
-  const hero = document.querySelector(".hero");
-
-  // Add any default event listeners or initializations here
-  window.addEventListener("load", function () {
-    console.log("Window loaded");
-  });
-});
-
 // navbar menu toggle
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menuToggle");
@@ -54,21 +39,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 //scroll effect for project section
 document.addEventListener("DOMContentLoaded", function () {
   const projectCards = document.querySelectorAll(".project-card");
-
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0.7) {
+        if (entry.intersectionRatio > 0.5) {
           entry.target.classList.add("visible");
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.7 }
+    { threshold: 0.5 }
   );
 
   projectCards.forEach((card) => {
