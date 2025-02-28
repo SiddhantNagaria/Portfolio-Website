@@ -157,8 +157,7 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="contact-container">
-                <form id="contact-form" action="/submit" method="post" enctype="multipart/form-data" novalidate
-                    onsubmit="handleFormSubmit(event)">
+                <form name="submit-to-google-sheet" id="contact-form" action="/submit" method="post" enctype="multipart/form-data" novalidate>
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required
