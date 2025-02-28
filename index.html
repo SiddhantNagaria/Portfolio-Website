@@ -96,7 +96,7 @@
             </div>
         </section>
 
-        <!-- Projects section -->
+        <!-- Projects section with Lightbox -->
         <section id="projects" class="projects-section">
             <h2>My Projects</h2>
             <div class="filter-buttons">
@@ -107,7 +107,7 @@
             </div>
             <div class="projects-grid">
                 <!-- Project Card 1 -->
-                <div class="project-card">
+                <div class="project-card" onclick="openLightbox('img/project1.avif')">
                     <img src="img/project1.avif" alt="Project 1" class="project-image">
                     <h3>Crud Application</h3>
                     <p class="project-description">A brief description of your first project goes here.</p>
@@ -115,7 +115,7 @@
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="project-card">
+                <div class="project-card" onclick="openLightbox('project2.jpg')">
                     <img src="project2.jpg" alt="Project 2" class="project-image">
                     <h3>Project Two</h3>
                     <p class="project-description">A brief description of your second project goes here.</p>
@@ -123,7 +123,7 @@
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="project-card">
+                <div class="project-card" onclick="openLightbox('project3.jpg')">
                     <img src="project3.jpg" alt="Project 3" class="project-image">
                     <h3>Project Three</h3>
                     <p class="project-description">A brief description of your third project goes here.</p>
@@ -133,11 +133,19 @@
             <button id="view-more" class="view-more-btn">View More</button>
         </section>
 
+        <!-- Lightbox Container -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" class="lightbox-img">
+        </div>
+
+
         <!-- Contact section -->
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="contact-container">
-                <form id="contact-form" action="#" method="post">
+                <form id="contact-form" action="/submit" method="post" enctype="multipart/form-data" novalidate
+                    onsubmit="handleFormSubmit(event)">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required
@@ -153,7 +161,7 @@
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Write your message" required minlength="10"
-                            title="Please provide a detailed message">
+                            title="Please provide a detailed message" maxlength="500" rows="5" cols="30">
                         </textarea>
                         <small class="error-message"></small>
                     </div>
