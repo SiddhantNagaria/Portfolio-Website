@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/project-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/services-section.css">
 </head>
 
 <body>
@@ -30,6 +31,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -42,6 +44,7 @@
         <!-- Home section -->
         <section id="home" class="home">
             <div class="hero">
+                <img src="img/myphoto.jpg" alt="Your Photo" class="profile-photo">
                 <h1>Welcome to My Portfolio</h1>
                 <p class="intro">I'm a passionate web developer creating beautiful and functional websites.</p>
                 <button id="cta"><a href="#projects" style="text-decoration: none;" id="cta">View My Work</a></button>
@@ -175,6 +178,41 @@
             <span class="close" onclick="closeLightbox()">&times;</span>
             <img id="lightbox-img" class="lightbox-img">
         </div> -->
+
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Full Stack Development</h3>
+                    <p>Building robust and scalable web applications using the MERN stack.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Web Application Development</h3>
+                    <p>Creating responsive, interactive, and user-friendly websites.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Machine Learning Solutions</h3>
+                    <p>Developing AI-powered solutions for real-world applications.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <i class="fa-solid fa-comments"></i>
+                    <h3>Consultation</h3>
+                    <p>Providing expert guidance in software development and data privacy compliance.</p>
+                </div>
+            </div>
+        </section>
 
 
         <!-- Contact section -->
