@@ -46,6 +46,12 @@
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+#contact-form:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
 #contact-form.visible {
     opacity: 1;
     transform: translateY(0);
@@ -64,7 +70,6 @@
     color: #333;
     margin-bottom: 5px;
 }
-
 
 .error-message {
     color: red;

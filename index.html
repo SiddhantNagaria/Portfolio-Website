@@ -44,7 +44,7 @@
             <div class="hero">
                 <h1>Welcome to My Portfolio</h1>
                 <p class="intro">I'm a passionate web developer creating beautiful and functional websites.</p>
-                <button id="cta"> View My Work</button>
+                <button id="cta"><a href="#projects" style="text-decoration: none;" id="cta">View My Work</a></button>
             </div>
         </section>
 
@@ -55,11 +55,11 @@
                 <div class="personal-info">
                     <h3>Hi, I'm Siddhant Nagaria</h3>
                     <p class="intro-2">I am a proficient MERN stack developer with hands-on experience in
-                        building web applications, including CRUD operations and authentication systems. I have
+                        building web applications, including CRUD operations and many more. I have
                         completed multiple internships, gaining expertise in JavaScript, React.js, Node.js, and MongoDB,
                         along with Python skills. My projects, such as the Blood Bank App and Amazon Clone,
                         showcase his ability to develop full-stack applications with a user-centric approach. I
-                        have also demonstrated problem-solving skills by solving 120+ LeetCode questions and securing a
+                        have also demonstrated problem-solving skills by solving 250+ LeetCode questions and securing a
                         top rank in a coding event. My technical proficiency is complemented by strong adaptability and
                         decision-making abilities.</p>
                     <div class="skills-list">
@@ -95,7 +95,7 @@
                 <div class="personal-description">
                     <p>I am a dedicated and versatile individual with a strong background in leadership,
                         teamwork, and problem-solving. I have actively participated in cultural events, taking on
-                        coordination roles in major college festivals like SRIJAN and Spandan, showcasing my
+                        coordination roles in major college festivals like Srijan and Spandhan, showcasing my
                         organizational and management skills. My ability to adapt and make effective decisions has been
                         evident through my participation in various competitions and workshops. Beyond academics,
                         I have engaged in multiple internships, gaining practical exposure to real-world projects.
@@ -123,27 +123,39 @@
                 <div class="project-card">
                     <img src="img/project1.avif" alt="Project 1" class="project-image">
                     <h3>Crud Application</h3>
-                    <p class="project-description">A brief description of your first project goes here.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <p class="project-description">Developed a full-stack CRUD application (May 2023 - July 2023) using
+                        JavaScript, React.js, Node.js, and MongoDB, enabling users to create, retrieve, update, and
+                        delete database entries. Implemented efficient data handling and seamless user experience,
+                        optimizing performance and functionality.</p>
+                    <a href="https://github.com/SiddhantNagaria/CRUD-Application-MERN" target="_blank"
+                        class="project-link">View Project</a>
                 </div>
 
                 <!-- Project Card 2 -->
                 <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2" class="project-image">
+                    <img src="img/project2.png" alt="Project 2" class="project-image">
                     <h3>User Activity Monitor</h3>
-                    <p class="project-description">A brief description of your second project goes here.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <p class="project-description">Developed a User Activity Monitor (August 2024), a Python-based
+                        desktop agent for tracking employee activity with secure cloud uploads. Key features include
+                        activity tracking, configurable screenshots, time zone management, and a singleton instance
+                        check to prevent multiple instances from running simultaneously.</p>
+                    <a href="https://github.com/SiddhantNagaria/User-Activity-Monitor" class="project-link"
+                        target="_blank">View Project</a>
                 </div>
 
                 <!-- Project Card 3 -->
                 <div class="project-card">
-                    <img src="project3.jpg" alt="Project 3" class="project-image">
+                    <img src="img/project3.png" alt="Project 3" class="project-image">
                     <h3>Blood Bank App</h3>
-                    <p class="project-description">A brief description of your third project goes here.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <p class="project-description">Developed a user-friendly Blood Bank App (June 2024 - July 2024)
+                        following the MVC architecture, streamlining blood donation tracking for donors and hospitals.
+                        Integrated an admin panel for efficient data management, ensuring secure and seamless
+                        record-keeping.</p>
+                    <a href="https://github.com/SiddhantNagaria/Blood-Bank-App---MernStack" target="_blank"
+                        class="project-link">View Project</a>
                 </div>
             </div>
-            <button id="view-more" class="view-more-btn">View More</button>
+            <!-- <button id="view-more" class="view-more-btn">View More</button> -->
         </section>
 
         <!-- Lightbox Container -->
@@ -157,7 +169,8 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="contact-container">
-                <form name="submit-to-google-sheet" id="contact-form" action="/submit" method="post" enctype="multipart/form-data" novalidate>
+                <form name="submit-to-google-sheet" id="contact-form" action="/submit" method="post"
+                    enctype="multipart/form-data" novalidate>
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required
@@ -182,8 +195,10 @@
                 <!-- Social Links -->
                 <div class="social-links">
                     <ul>
-                        <li><a href="#"><i class="fab fa-github"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/SiddhantNagaria" target="_blank"><i
+                                    class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/siddhant-nagaria/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -197,25 +212,26 @@
             <section class="about-section2">
                 <h3>About</h3>
                 <p>Siddhant Nagaria</p>
-                <p>Web Developer & Designer</p>
+                <p>Full Stack Developer</p>
             </section>
 
             <section class="contact-section2">
                 <h3>Contact</h3>
-                <p>Email: your.email@example.com</p>
-                <p>Phone: (123) 456-7890</p>
+                <p><i class="fa-solid fa-envelope"></i> siddhant.nagaria1234@gmail.com</p>
+                <!-- <p>Phone: (123) 456-7890</p> -->
             </section>
 
             <section class="social-section2">
                 <h3>Connect With Me</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SiddhantNagaria" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/siddhant-nagaria/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
                 </div>
             </section>
 
             <div class="copyright">
-                <p>&copy; 2023 Siddhant Nagaria. All rights reserved.</p>
+                <p>&copy; 2025 Siddhant Nagaria. All rights reserved.</p>
             </div>
         </div>
     </footer>
